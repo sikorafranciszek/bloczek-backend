@@ -19,9 +19,6 @@ type Props = {
 
 export default function Dashboard({ user, products }: Props) {
 
-    console.log('user', user);
-    console.log('products', products);
-
 
     if (user.role === 'unchecked') {
         return (
@@ -38,7 +35,7 @@ export default function Dashboard({ user, products }: Props) {
 
     return (
         <AppLayout breadcrumbs={breadcrumbs}>
-            <Head title="Dashboard" />
+            <Head title="Panel Produktów" />
             <div className="flex h-full flex-1 flex-col gap-4 rounded-xl p-4 overflow-x-auto">
                 {user.role === 'admin' && (
                     <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4 mb-4">

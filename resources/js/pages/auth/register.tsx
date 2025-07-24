@@ -32,12 +32,12 @@ export default function Register() {
     };
 
     return (
-        <AuthLayout title="Create an account" description="Enter your details below to create your account">
-            <Head title="Register" />
+        <AuthLayout title="Utwórz konto" description="Wprowadź swoje dane poniżej, aby utworzyć konto">
+            <Head title="Rejestracja" />
             <form className="flex flex-col gap-6" onSubmit={submit}>
                 <div className="grid gap-6">
                     <div className="grid gap-2">
-                        <Label htmlFor="name">Name</Label>
+                        <Label htmlFor="name">Imię</Label>
                         <Input
                             id="name"
                             type="text"
@@ -54,7 +54,7 @@ export default function Register() {
                     </div>
 
                     <div className="grid gap-2">
-                        <Label htmlFor="email">Email address</Label>
+                        <Label htmlFor="email">Adres e-mail</Label>
                         <Input
                             id="email"
                             type="email"
@@ -70,7 +70,7 @@ export default function Register() {
                     </div>
 
                     <div className="grid gap-2">
-                        <Label htmlFor="password">Password</Label>
+                        <Label htmlFor="password">Hasło</Label>
                         <Input
                             id="password"
                             type="password"
@@ -86,7 +86,7 @@ export default function Register() {
                     </div>
 
                     <div className="grid gap-2">
-                        <Label htmlFor="password_confirmation">Confirm password</Label>
+                        <Label htmlFor="password_confirmation">Potwierdź hasło</Label>
                         <Input
                             id="password_confirmation"
                             type="password"
@@ -103,14 +103,14 @@ export default function Register() {
 
                     <Button type="submit" className="mt-2 w-full" tabIndex={5} disabled={processing}>
                         {processing && <LoaderCircle className="h-4 w-4 animate-spin" />}
-                        Create account
+                        Utwórz konto
                     </Button>
                 </div>
 
                 <div className="text-center text-sm text-muted-foreground">
-                    Already have an account?{' '}
+                    Masz już konto?{' '}
                     <TextLink href={route('login')} tabIndex={6}>
-                        Log in
+                        Zaloguj się
                     </TextLink>
                 </div>
             </form>

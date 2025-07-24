@@ -99,6 +99,14 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/analytics', [App\Http\Controllers\AnalyticsController::class, 'index'])
         ->name('analytics');
 
+    // User management routes - only for admins
+    Route::get('/admin/users', [App\Http\Controllers\UserManagementController::class, 'index'])
+        ->name('admin.users');
+    Route::put('/admin/users/{user}/role', [App\Http\Controllers\UserManagementController::class, 'updateRole'])
+        ->name('admin.users.update-role');
+    Route::delete('/admin/users/{user}', [App\Http\Controllers\UserManagementController::class, 'destroy'])
+        ->name('admin.users.destroy');
+
     // Image upload routes dla admina
     Route::post('/images/upload', [App\Http\Controllers\ImageUploadController::class, 'upload'])
         ->name('images.upload');

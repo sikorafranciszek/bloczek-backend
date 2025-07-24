@@ -24,15 +24,15 @@ export default function ConfirmPassword() {
 
     return (
         <AuthLayout
-            title="Confirm your password"
-            description="This is a secure area of the application. Please confirm your password before continuing."
+            title="Potwierdź hasło"
+            description="To jest bezpieczny obszar aplikacji. Proszę potwierdzić swoje hasło przed kontynuowaniem."
         >
-            <Head title="Confirm password" />
+            <Head title="Potwierdź hasło" />
 
             <form onSubmit={submit}>
                 <div className="space-y-6">
                     <div className="grid gap-2">
-                        <Label htmlFor="password">Password</Label>
+                        <Label htmlFor="password">Hasło</Label>
                         <Input
                             id="password"
                             type="password"
@@ -50,7 +50,7 @@ export default function ConfirmPassword() {
                     <div className="flex items-center">
                         <Button className="w-full" disabled={processing}>
                             {processing && <LoaderCircle className="h-4 w-4 animate-spin" />}
-                            Confirm password
+                            Potwierdź hasło
                         </Button>
                     </div>
                 </div>
